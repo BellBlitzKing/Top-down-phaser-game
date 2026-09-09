@@ -53,9 +53,10 @@ body {
 
 .map {
    image-rendering: pixelated;
-   background-image: url("https://assets.codepen.io/21542/CameraDemoMap.png");
+   /* background-image: url("https://assets.codepen.io/21542/CameraDemoMap.png"); */
+   background-image: url("https://bellblitzking.github.io/Top-down-phaser-game/CameraDemoMap_x2.png");
    background-size: 100%;
-   width: calc(13 * var(--grid-cell));
+   width: calc(26 * var(--grid-cell));
    height: calc(10 * var(--grid-cell));
    position: relative;
 }
