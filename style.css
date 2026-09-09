@@ -31,7 +31,9 @@ body {
 }
 
 .pixel-art {
-   image-rendering: pixelated;
+   -ms-interpolation-mode: nearest-neighbor;
+       image-rendering: -moz-crisp-edges;
+       image-rendering: pixelated;
 }
 
 .frame {
@@ -52,7 +54,9 @@ body {
 }
 
 .map {
-   image-rendering: pixelated;
+   -ms-interpolation-mode: nearest-neighbor;
+       image-rendering: -moz-crisp-edges;
+       image-rendering: pixelated;
    background-image: url("https://assets.codepen.io/21542/CameraDemoMap.png");
    background-size: 100%;
    width: calc(13 * var(--grid-cell));
@@ -95,7 +99,17 @@ body {
    background-position-y: calc( var(--pixel-size) * -96 );
 }
 .character[walking="true"] .character_spritesheet {
-   animation: walkAnimation 0.6s steps(4) infinite; 
+   -webkit-animation: walkAnimation 0.6s steps(4) infinite;
+           animation: walkAnimation 0.6s steps(4) infinite; 
+}
+
+@-webkit-keyframes walkAnimation {
+  from {
+    transform: translate3d(0%,0%,0);
+  }
+  to {
+    transform: translate3d(-100%,0%,0);
+  }
 }
 
 @keyframes walkAnimation {
@@ -115,7 +129,9 @@ body {
    height: calc(var(--pixel-size) * 38);
 }
 .dpad-button {
-   appearance:none;
+   -webkit-appearance:none;
+      -moz-appearance:none;
+           appearance:none;
    outline:0;
    border:0;
    background:transparent;
@@ -152,7 +168,10 @@ body {
 }
 
 .dpad {
-   user-select:none;
+   -webkit-user-select:none;
+      -moz-user-select:none;
+       -ms-user-select:none;
+           user-select:none;
 }
 
 
